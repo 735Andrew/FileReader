@@ -76,7 +76,7 @@ if __name__ == "__main__":
     }
 
     for file in namespace.files:
-        file_data: Dict[str:int] = file_reader(file)
+        file_data: Dict[str:int, ...] = file_reader(file)
         report[namespace.report].append(file_data)
 
     print(dumps(report))
